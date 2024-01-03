@@ -1,0 +1,43 @@
+\ \   /      ___| |    _)  _ \        
+ \   / _` | |     __ \  | |   | |   | 
+    | (   | |     | | | | ___/  |   | 
+   _|\__,_|\____|_| |_|_|_|    \__, | 
+                               ____/  
+
+                                                             
+Welcome to YaChiPy, a Chip-8 Emulator with Debug Features!
+
+- Get ready to step back in time and experience the charm of retro gaming, now with powerful debug capabilities!
+
+- Dive into the world of Chip-8 and enjoy classic pixelated graphics. But wait, there's more! This emulator comes equipped with advanced debug features to enhance your gaming and programming experience.
+
+- Pause the emulator at any moment to inspect the state of the virtual machine. Take control of time with the ability to speed up or slow down the CPU clock, allowing you to fine-tune your gaming experience.
+
+- Peek into the machine's heart! Displayed in real-time are the memory contents, register values, and timer values. Understand the inner workings of the Chip-8 machine as you play and program.
+
+- Want to understand every step of the action? Execute instructions one tick at a time with our step-by-step mode. Uncover the secrets of Chip-8 programming and gaming at your own pace.
+
+- Load your favorite ROMs, customize settings, and embark on a journey filled with nostalgia and discovery. Whether you're a seasoned enthusiast or a curious newcomer, this emulator is your gateway to the golden age of gaming, now with the added thrill of detailed debugging.
+
+Thank you for choosing our Chip-8 emulator with debug features. Enjoy the retro vibes, happy gaming, and happy debugging!
+
+- The Chip-8 Emulator Team
+
+
+
+           
+           
+            KEYBOARD MAPPING
+________________________________________
++---+---+---+---+      +---+---+---+---+
+| 1 | 2 | 3 | C |      | 1 | 2 | 3 | 4 |
++---+---+---+---+      +---+---+---+---+
+| 4 | 5 | 6 | D |      | Q | W | E | R |
++---+---+---+---+  ->  +---+---+---+---+
+| 7 | 8 | 9 | E |      | A | S | D | F |
++---+---+---+---+      +---+---+---+---+
+| A | 0 | B | F |      | Z | X | C | V |
++---+---+---+---+      +---+---+---+---+
+________________________________________
+
+
