@@ -2,6 +2,8 @@
 
 Yet Another Chip8 Emulator written in Python using [DearPyGui](https://github.com/hoffstadt/DearPyGui)
 
+![](assets/yachipy.gif)
+
 ---
 
 🎮 Welcome to YaChiPy, a Chip-8 Emulator with Debug Features!
