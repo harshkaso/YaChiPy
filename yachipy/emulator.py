@@ -1,9 +1,8 @@
 import dearpygui.dearpygui as dpg
 from .cpu import Chip8CPU
 from .screen import Chip8Screen
-from.config import MEM_SIZE, ROM_FOLDER, SCALE, KEY_MAP_R, ACCENT_COLOR, NEUTRAL_COLOR, DULL_COLOR, SCREEN_HEIGHT, SCREEN_WIDTH
+from.config import MEM_SIZE, ROM_FOLDER, SCALE, KEY_MAP_R, ACCENT_COLOR, NEUTRAL_COLOR, DULL_COLOR
 import time
-import threading
 
 class Chip8:
     def __init__(self) -> None:
@@ -30,7 +29,6 @@ class Chip8:
             dpg.set_primary_window(emulator, True)
 
         dpg.create_viewport(title='YaChiPy')
-        # dpg.set_exit_callback(callback=self.cpu.terminate)
 
 
     def key_down_handler(self, sender, data):
@@ -48,9 +46,6 @@ class Chip8:
                 with dpg.theme_component(dpg.mvAll):
                     dpg.add_theme_color(dpg.mvThemeCol_Button, NEUTRAL_COLOR)
             dpg.bind_item_theme(btn_tag, dehighlight)
-        # with dpg.theme() as highlight:
-        #     with dpg.theme_component(dpg.mvAll):
-        #         dpg.add_theme_color(dpg.mvThemeCol_Button, sender,)
 
     
     def load_rom(self, sender, data):
@@ -253,32 +248,18 @@ class Chip8:
         for i in self.cpu.update_indices['memory']:
             color = None
             if self.cpu.memory[i] == 0:
-                color = NEUTRAL_COLOR
+                color = DULL_COLOR
             dpg.configure_item(self.memory[i], default_value=hex(self.cpu.memory[i])[2:].zfill(2).upper(), color=color)
         self.cpu.update_indices['memory']=set([])
-
-    # def bind_themes(self) -> None:
-    #     with dpg.theme() as emulator_theme:
-    #         with dpg.theme_component(dpg.mvAll):
-    #             dpg.add_theme_style(dpg.mvStyleVar_WindowPadding, 0)
-    #             dpg.add_theme_color(dpg.mvThemeCol_ChildBg, self.screen.color_pixel_off, category=dpg.mvThemeCat_Core)
-
-    #     dpg.bind_item_theme(self.emulator_display, emulator_theme)
 
 
     def run(self) -> None:
         # Do bunch of other setups if required
-        # self.bind_themes()
         dpg.show_viewport()
         # dpg.show_metrics()
-        dpg.show_style_editor()
+        # dpg.show_style_editor()
         dpg.maximize_viewport()
         dpg.set_viewport_vsync(False)
-
-        
-
-        # threading.Thread(target=self.cpu.run, args=[]).start()
-        # dpg.start_dearpygui()
 
         self.current_time = time.perf_counter()
         while dpg.is_dearpygui_running():
