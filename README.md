@@ -1,5 +1,13 @@
 # YaChiPy
 
+```
+\ \   /        ___/  /    _) _ \
+ \   /  _ ` / /     __ \  / /  / /   /
+    /  (   / /     /   / / ___/ /   /
+   / \__,_/\____/_/  _/_/_/   \__, /
+__/ ______________________________/
+```
+
 Yet Another Chip8 Emulator written in Python using [DearPyGui](https://github.com/hoffstadt/DearPyGui)
 
 ![](assets/yachipy.gif)
@@ -28,13 +36,13 @@ Clone the repository to your local machine. Navigate to the directory where you 
 
 1. Install the required dependencies by executing the following command in your terminal:
 
-```bash
+```shell
 $ pip install -r requirements.txt
 ```
 
 2. With the dependencies installed, run the emulator using the following command:
 
-```bash
+```shell
 $ python -m yachipy
 ```
 
